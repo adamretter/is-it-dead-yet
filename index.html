@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" ng-app="iidyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Is it dead yet?</title>
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+    <link rel="stylesheet" href="css/iidy.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Is it dead yet?</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon3">https://github.com/</span>
+              <input type="text" class="form-control" placeholder="exist-db/exist" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">The Sad Graph of Death <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">The Sad Graph of Death</h1>
+
+          <div id="line-chart" ng-controller="LineCtrl">
+            <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="true" chart-series="series" chart-click="onClick" chart-colours="colours"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/Chart.js/Chart.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="bower_components/angular-underscore/angular-underscore.js"></script>
+    <script src="js/iidy.js"></script>
+
+  </body>
+</html>
